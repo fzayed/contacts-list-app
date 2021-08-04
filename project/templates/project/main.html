@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contacts App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            /* background-color: #FAFAFA; */
+            background: linear-gradient(90deg, #553ea8 0%, #483ea3 43%, #2f1c85 100%);
+            font-family: 'Inter', sans-serif;
+            padding-top: 50px;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        a {
+            color: #9099ee;
+        }
+        
+        p {
+            color: #838eee;
+            font-weight: 1000;
+            display: flex;
+        }
+        
+        .container {
+            max-width: 370px;
+            height: 625px;
+            margin: auto;
+            background-color: #fff;
+            -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+        }
+        
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            /* border-radius: 5px 5px 0 0; */
+            background: linear-gradient(90deg, #9099ee 0%, #7b6feb 43%, #5e43d8 100%);
+        }
+        
+        .header-bar a {
+            color: rgba(247, 247, 247);
+            text-decoration: none;
+        }
+        
+        hr {
+            border: 1px solid #dfe4ea;
+        }
+        
+        .contact-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px 15px 20px;
+            background-color: #fff;
+            border-top: 1px solid #dfe4ea;
+            border-bottom: 1px solid #dfe4ea;
+        }
+        
+        .contact-wrapper:hover {
+            background-color: #d3d4e2;
+        }
+        
+        .contact-title {
+            display: flex;
+            color: #838eee;
+        }
+        
+        .contact-title a {
+            text-decoration: none;
+            color: #9099ee;
+            margin-left: 10px;
+        }
+        
+        .icons {
+            text-decoration: none;
+            font-weight: 900;
+            color: #9099ee;
+            font-size: 20px;
+            line-height: 0;
+        }
+        
+        #add-link {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            text-shadow: 1px 1px #503b81;
+            padding-left: 5px;
+        }
+        
+        #search-add-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px 8px 40px;
+        }
+        
+        input[type=text],
+        input[type=email],
+        textarea {
+            font-size: 15px;
+            border-style: none;
+            color: #838eee;
+            border-radius: 5px;
+            padding: 5px;
+            width: 70%;
+            margin-left: 10px;
+            margin-top: 6px;
+            margin-right: 20px;
+            background-color: #e0d9ff;
+        }
+        
+        label {
+            padding-top: 10px !important;
+            display: block;
+        }
+        
+         ::placeholder {
+            color: #9099ee;
+            font-size: 15px;
+            font-weight: 400;
+            opacity: 0.5;
+        }
+        
+        .button {
+            border: 1px none #757575;
+            background-color: #FFF;
+            color: #838eee;
+            padding: 20px 10px 20px 0px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .card-body {
+            padding: 50px 50px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+</body>
+
+</html>

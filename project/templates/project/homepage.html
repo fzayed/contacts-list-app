@@ -1,0 +1,34 @@
+{% extends 'project/main.html' %} {% block content %}
+
+<div class='header-bar'>
+    <div id="search-add-wrapper">
+        <form method="GET" style="margin-top: 15px; margin-bottom: 15px; display: flex;" id='search-form'>
+            <input style="margin-top: 0px; border-radius: 20px; width: 200px; height: 10px; border: 0ch; font-size: 15px; margin-right: 0px; background-color: white; color: #9099ee; padding: 10px;" type="text" name="search-area" placeholder="Search" value="{{search_input}}">
+            <i onclick="document.getElementById('search-form').submit();" style="padding: 5px 10px; padding-left: 15px; font-size: 20px;" class="fas fa-search"></i>
+        </form>
+
+        <a id="add-link" href="{% url 'contact-create' %}"><i class="fas fa-plus-circle add"></i></a>
+    </div>
+</div>
+
+<div class="contact-items-wrapper">
+    {% for contact in contacts %}
+    <div class="contact-wrapper">
+        <div class="contact-title">
+            <a href="{% url 'contact' contact.id %}" style="text-decoration: none;">
+                <p class="contact-title">{{ contact.name | title }}</p>
+            </a>
+        </div>
+        <div class="icons">
+            <a href="{% url 'contact' contact.id %}" style="text-decoration: none;">
+                <i style="padding-right: 10px;" class="fas fa-phone"></i>
+                <i class="fas fa-sms text"></i>
+            </a>
+        </div>
+    </div>
+    {% empty %}
+    <h3 style="color: #838eee; padding: 10px 10px 20px 10px;">No contacts in list</h3>
+    {% endfor %}
+</div>
+
+{% endblock content %}

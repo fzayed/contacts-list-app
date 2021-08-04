@@ -1,0 +1,18 @@
+{% extends 'project/main.html' %} {% block content %}
+<div class="header-bar">
+    <div>
+        <a style="font-size: 20px; padding-top: 20px; padding-left: 20px; padding-bottom: 20px; text-decoration: none; " class="fas fa-chevron-circle-left back-btn " href="{% url 'contacts' %}"></a>
+    </div>
+    <h1 style="margin: auto; font-size: 20px; padding: 12% 25% 10% 30px;">New Contact</h1>
+</div>
+<div class="card-body" style="padding-top: 10px;">
+    <form method="POST" action="">
+        {%csrf_token%} {{form.as_p}}
+        <div style="padding-left: 50px;">
+            <i style="height: 17px; margin-right: 20px; padding: 7px; font-size: 17px; color: white; border-radius: 1cm;  background: linear-gradient(90deg, #9099ee 0%, #7b6feb 43%, #5e43d8 100%); " class="fas fa-check-circle icon-gradient"></i>
+            <input class="button" type="submit" value="Add Contact">
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
